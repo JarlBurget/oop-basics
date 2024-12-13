@@ -4,8 +4,12 @@ class Course {
         this.grades = [];
     }
 
+    getName() {return this.name}
+
     addGrade(student, grade) {
-        this.grades.push({ student, grade });
+        this.grades.push({ 
+            student: student.getName(), 
+            grade: grade });
     }
 
     getGrades() {

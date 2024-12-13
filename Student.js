@@ -7,6 +7,8 @@ class Student extends Person {
         this.grades = [];
     }
 
+    getName() {return this.name}
+
     setId(id) {
         if (this.id === null) {
             this.id = id;
@@ -18,7 +20,9 @@ class Student extends Person {
     }
 
     addGrade(course, grade) {
-        this.grades.push({ course, grade });
+        this.grades.push({
+             course: course.getName(), 
+             grade: grade });
     }
 
     getGrades() {
